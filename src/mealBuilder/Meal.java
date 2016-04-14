@@ -8,20 +8,14 @@ import java.util.List;
 
 public class Meal {
 	
-	List<Item> items = new ArrayList<Item>();
-	
-	
-	private Meal (MealBuilder builder)
-	{
-		this.items=builder.getItems();
-	}
+	private List<Item> items = new ArrayList<Item>();
 	
 	public void addItem(Item item)
 	{
 		items.add(item);
 	}
 	
-	public float getCost()
+	public float totalCost()
 	{
 		float totalCost=0;
 		
@@ -32,6 +26,8 @@ public class Meal {
 		return totalCost;
 	}
 	
+	
+	
 	public void showItems()
 	{
 		for(Item tmp : items )
@@ -41,7 +37,7 @@ public class Meal {
 			System.out.println("Price: "+tmp.price());
 		}
 	}
-	
+	/*
 	public static class MealBuilder
 	{
 		List<Item> items = new ArrayList<Item>();
@@ -61,11 +57,7 @@ public class Meal {
 			return null;
 		}
 	
-		public Meal build()
-		{
-			return new Meal(this);
-		}
-	
+		
 		public MealBuilder addItem(Item item)
 		{
 			items.add(item);
@@ -84,7 +76,7 @@ public class Meal {
 		
 	}
 	
-	
+	*/
 	
 
 }

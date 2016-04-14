@@ -7,7 +7,7 @@ public class ChickenBurger extends Burger {
 	private float price;
 	public ChickenBurger(){
 		this.name="Chicken Burger";
-		this.price=22;
+		this.price=27;
 	}
 
 	public Packing packing(){
@@ -20,8 +20,8 @@ public class ChickenBurger extends Burger {
 	}
 
 	
-	public float price() {
+	public float price(){
 		return price;
-	}
+	};
 
 }

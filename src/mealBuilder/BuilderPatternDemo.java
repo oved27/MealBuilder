@@ -9,13 +9,17 @@ public class BuilderPatternDemo {
 
 	public static void main(String[] args) {
 
-				Coke cola= new Coke();
-				Pepsi pep= new Pepsi();
-				Burger beefBurger = new ChickenBurger ();
-				
-				Meal newMeal= new Meal.MealBuilder().getMeal("VegBurger").addItem(beefBurger).build();
-				newMeal.showItems();
-
+		MealBuilder mealBuilder=new MealBuilder();
+		Meal vegMeal=mealBuilder.prepareVegMeal();
+		System.out.println("vegiterien meal");
+		vegMeal.showItems();
+		System.out.println("Meal cost is: " + vegMeal.totalCost());
+		
+		Meal nonMeal=mealBuilder.prepareNonVegMeal();
+		System.out.println("Non vegiterien meal");
+		nonMeal.showItems();
+		System.out.println("Meal cost is: " + nonMeal.totalCost());
+		
 
 	}
 

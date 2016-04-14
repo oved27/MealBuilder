@@ -9,5 +9,6 @@ public abstract class Burger implements Item {
 		return new Wrapper();
 		
 	}
+	public abstract float price();
 
 }

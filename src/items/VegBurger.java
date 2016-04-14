@@ -9,6 +9,9 @@ public class VegBurger extends Burger {
 		this.name="Vegiterien Burger";
 		this.price=22;
 	}
+	public float price(){
+	      return price;
+	   }
 
 	public Packing packing(){
 		return super.pack();
@@ -20,8 +23,6 @@ public class VegBurger extends Burger {
 	}
 
 	
-	public float price() {
-		return price;
-	}
+
 
 }

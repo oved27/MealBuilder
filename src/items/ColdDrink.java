@@ -9,5 +9,6 @@ public abstract class ColdDrink implements Item {
 		return new Bottel();
 		
 	}
+	public abstract float price();
 
 }
